@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import axios from 'axios';
 import { Header, List } from 'semantic-ui-react';
 
@@ -16,8 +14,8 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Header as='h2' icon='users' content='React' />
+    <div className="App">
+      <Header align='center' as='h2' icon='users' content='React' />
 
       <List>
         {activities.map((activity: any) => (
