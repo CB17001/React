@@ -28,7 +28,7 @@ export default observer(function ActivityDashboard() {
     const {selectedActivity, editMode} = activityStore;
     return <Grid>
         <Grid.Column width='10'>
-            <ActivityList />
+            <ActivityList /> 
         </Grid.Column>
         <Grid.Column width='6'>
             {selectedActivity && !editMode && 
