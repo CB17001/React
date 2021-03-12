@@ -11,7 +11,7 @@ export default function HomePage() {
                     React
                 </Header>
                 <Header as='h2' inverted content='Welcome to React' />
-                <Button as={Link} to={'/actiities'} size='huge' inverted>
+                <Button as={Link} to={'/activities'} size='huge' inverted>
                     Take me to the Activities!
                 </Button>
             </Container>
