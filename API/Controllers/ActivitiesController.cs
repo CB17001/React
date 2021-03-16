@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.Activities;
 using Domain;
@@ -11,7 +10,7 @@ namespace API.Controllers
     public class ActivitiesController : BaseApiController
     {
         
-
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetActivities()
         {
