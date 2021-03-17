@@ -18,6 +18,9 @@ export default observer(function NavBar() {
                 <Menu.Item>
                     <Button as={NavLink} to='/createActivity' positive content='Create Activity' />
                 </Menu.Item>
+                <Menu.Item>
+                    <Button as={NavLink} to='/createActivity2' positive content='Create Activity using React Hooks Form' />
+                </Menu.Item>
                 <Menu.Item position='right'>
                     <Image src={user?.image || '/assets/user.png'} avatar spaced='right' />
                     <Dropdown pointing='top left' text={user?.displayName}>
