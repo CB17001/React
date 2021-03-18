@@ -5,7 +5,7 @@ import { observer } from 'mobx-react-lite';
 import { Route, Switch, useLocation } from 'react-router';
 import HomePage from '../../features/home/HomePage';
 import ActivityForm from '../../features/activities/form/ActivityForm';
-import ActivityReactForm from '../../features/activities/form/ActivityReactForm';
+//import ActivityReactForm from '../../features/activities/form/ActivityReactForm';
 import ActivityDetails from '../../features/activities/details/ActivityDetails';
 import TestErrors from '../../features/errors/TestError';
 import { ToastContainer } from 'react-toastify';
@@ -47,7 +47,6 @@ function App() {
                 <Route exact path='/activities' component={ActivityDashboard} />
                 <Route path='/activities/:id' component={ActivityDetails} />
                 <Route key={location.key} path={['/createActivity', '/manage/:id']} component={ActivityForm} />
-                <Route exact path='/createActivity2' component={ActivityReactForm} />
                 <Route path='/errors' component={TestErrors} />
                 <Route path='/server-error' component={ServerError} />
                 <Route path='/login' component={LoginForm} />
