@@ -21,6 +21,7 @@ using FluentValidation.AspNetCore;
 using API.Middleware;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using API.SignalR;
 
 namespace API
 {
@@ -57,15 +58,15 @@ namespace API
 
             if (env.IsDevelopment())
             {
-                //app.UseSwagger();
-                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
             }
 
             //app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            //app.UseCors("CorsPolicy");
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
 
@@ -74,6 +75,7 @@ namespace API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<ChatHub>("/chat");
             });
         }
     }
