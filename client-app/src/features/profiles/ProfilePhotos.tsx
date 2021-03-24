@@ -4,6 +4,7 @@ import { Card, Header, Tab, Image, Grid, Button } from 'semantic-ui-react'
 import PhotoUploadWidget from '../../app/common/imageUpload/PhotoUploadWidget'
 import { Photo, Profile } from '../../app/models/profile'
 import { useStore } from '../../app/stores/store'
+import TreeView from 'devextreme-react/tree-view';
 
 interface Props {
     profile: Profile;

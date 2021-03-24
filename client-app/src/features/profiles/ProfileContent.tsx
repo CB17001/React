@@ -5,6 +5,7 @@ import { useStore } from '../../app/stores/store'
 import ProfileActivities from './ProfileActivities'
 import ProfileFollowings from './ProfileFollowings'
 import ProfilePhotos from './ProfilePhotos'
+import TreeView from 'devextreme-react/tree-view';
 
 interface Props {
     profile: Profile;
